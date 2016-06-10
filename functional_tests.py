@@ -17,6 +17,9 @@ class NewVisitorTest(unittest.TestCase):
 
         # She notices the page title and header mention Ryan Renno
         self.assertIn('Ryan Renno', self.browser.title)
+        #She notices the page title and header mention Ryan Renno
+        header_text = self.browser.find_element_by_tag_name('h1').text
+        self.assertIn('Ryan Renno', header_text)        
         self.fail('Finish the test!')
 
         # She likes what she sees and leaves the site
